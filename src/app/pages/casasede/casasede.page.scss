@@ -1,0 +1,121 @@
+
+.header {
+    background-color: #004b80; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 9%; 
+    font-size: large;
+    font-weight: bold;
+}
+
+.txtDorado {
+    color: gold; 
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.txtBlanco {
+    color: white; 
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.titulo {
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+
+ion-icon {
+    margin-right: 0px; 
+}
+
+
+.fondo {
+    --background: url('../../../assets/img/fondo.png') 0/100% 100%;
+}
+
+
+ion-footer {
+    background-color: #e3e3e3;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+.footer ion-icon {
+    margin: 0 30px;
+    font-size: 24px;
+}
+
+
+.busqueda span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e3e3e3;
+    color: black;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: -13%;
+}
+
+.busqueda ion-icon:first-child {
+    margin-left: 5px; 
+}
+
+.busqueda ion-icon:last-child {
+    margin-right: 5px; 
+}
+
+
+.direccion {
+    display: flex;
+    margin-left: 0%;
+    padding: 5px; 
+    color: black;
+    margin-top: 5%;
+    font-size: xx-large;
+    
+}
+
+.direccion ion-title {
+    font-size: large; 
+    margin-left: 15px; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: -9%;
+}
+
+.direccion ion-icon {
+    margin-top: 5px;
+    margin-right: 10px;
+    font-size: 40px;
+}
+
+.direccion-detallada{
+    color: black;
+    font-size: medium;
+    margin-left: 52px;
+    margin-top: -10px;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px; 
+    width: 75%; 
+}
+
+.icono{
+    color: black;
+    margin-top: 5%;
+    font-size: 30px;
+}

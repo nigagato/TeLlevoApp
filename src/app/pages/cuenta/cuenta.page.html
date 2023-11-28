@@ -1,0 +1,33 @@
+<ion-content [fullscreen]="true" class="fondo">
+  <div class="header">
+    <div class="header-text">
+      <span class="txtDorado">TeLlevo</span> <span class="txtBlanco">App</span>
+    </div>
+  </div>
+  <ion-toolbar color="white">
+    <div class="user-info">
+      <ion-title>{{usuario}}</ion-title>
+      <ion-icon name="person"></ion-icon>
+    </div>
+    <h1 class="estrella">★ 5.0</h1>
+  </ion-toolbar>
+  <br>
+  <div class="config">
+    <ion-icon name="settings-sharp" class="icono"></ion-icon>   <span class="txt" (click)="config()">Configuración</span>
+  </div>
+  <div class="config">
+    <ion-icon name="reader-outline" class="icono"></ion-icon><span class="txt" (click)="listadotrayectos()">Listado de trayectos</span>
+  </div>
+
+  <div class="config">
+    <ion-icon name="cash-outline" class="icono"></ion-icon>      <span class="txt" (click)="ganancias()">Ganancias</span>
+  </div>
+
+  <ion-footer>
+    <div class="footer">
+      <ion-icon name="home-outline" (click)="menu()"></ion-icon>
+      <ion-icon name="car-sport-outline" (click)="servicios()"></ion-icon>
+      <ion-icon name="person-circle-outline" (click)="cuenta()"></ion-icon>
+    </div>
+  </ion-footer>
+</ion-content>

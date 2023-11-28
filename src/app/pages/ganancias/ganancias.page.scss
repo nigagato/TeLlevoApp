@@ -1,0 +1,64 @@
+.header {
+    background-color: #004b80; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 9%; 
+    font-size: large;
+    font-weight: bold;
+}
+  
+  
+.txtDorado{
+    color: gold; 
+}
+  
+.txtBlanco{
+    color: white; 
+}
+.fondo{
+    --background: url('../../../assets/img/fondo.png') 0/100% 100%;
+    
+}
+.ganancias {
+    color: black;
+    display: flex;
+    margin-top: 10%;
+    align-items: center;
+}
+
+.ganancias-icon {
+    margin-right: 10px;
+    align-self: flex-start;
+    font-size: 30px;
+}
+
+.ganancias-titulo {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.ganancias-detalle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 75%;
+    margin: 5% auto;
+    color: green;
+}
+
+.ganancias-detalle div {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    font-size: x-large;
+}
+
+/* Eliminar la línea inferior y cambiar el color del texto para el período de ganancias */
+
+  

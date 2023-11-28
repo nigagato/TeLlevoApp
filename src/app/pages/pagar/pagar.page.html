@@ -1,0 +1,41 @@
+<ion-content [fullscreen]="true" class="fondo">
+  <div class="header">
+    <div class="header-text">
+      <span class="txtDorado">TeLlevo</span> <span class="txtBlanco">App</span>
+    </div>
+  </div>
+  <div class="titulo">
+    <ion-icon name="chevron-back-outline" (click)="pasajero4()"></ion-icon>Pago
+  </div>
+  <br>
+
+
+  <div class="info-texto">Número de tarjeta</div>
+  <div class="info">
+    <span class="direccion-texto">.</span>
+  </div>
+
+
+  <br>
+  <div class="info-texto">Fecha de expiración</div>
+  <div class="info"> 
+    <span class="direccion-texto">.</span>
+  </div>
+  
+
+  <br>
+  <div class="info-texto">CVV</div>
+  <div class="info"> 
+    <span class="direccion-texto">.</span>
+  </div>
+  
+
+  <ion-button fill="clear" expand="block" class="boton" (click)="pagorealizado()">Pagar</ion-button>
+  <ion-footer>
+    <div class="footer">
+      <ion-icon name="home-outline" (click)="menu()"></ion-icon>
+      <ion-icon name="car-sport-outline" (click)="servicios()"></ion-icon>
+      <ion-icon name="person-circle-outline" (click)="cuenta()"></ion-icon>
+    </div>
+  </ion-footer>
+</ion-content>

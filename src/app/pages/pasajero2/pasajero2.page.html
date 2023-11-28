@@ -1,0 +1,38 @@
+<ion-content [fullscreen]="true" class="fondo">
+  <div class="header">
+    <div class="header-text">
+      <span class="txtDorado">TeLlevo</span> <span class="txtBlanco">App</span>
+    </div>
+  </div>
+
+  <div class="titulo">
+    <ion-icon name="chevron-back-outline" (click)="conductor()"></ion-icon>Trayecto
+  </div>
+    <div id="controles">
+      <ion-input [(ngModel)]="direccion" style="color: black;"></ion-input>
+      <ion-button (click)="buscar()">Buscar</ion-button>
+      <ion-button (click)="ir()">IR</ion-button>
+    </div>  
+    <div id="map"></div>
+
+    
+
+
+  <mat-form-field floatLabel="always" style="margin-left: 5%; color: black;">
+    <mat-label>Precio</mat-label>
+    <input matInput type="number" class="example-right-align" placeholder="0" [(ngModel)]="valor">
+    <span matTextPrefix>$&nbsp;</span>
+    <span matTextSuffix>.00</span>
+  </mat-form-field>
+
+
+  <br>
+  <ion-button fill="clear" expand="block" class="boton" (click)="grabarViaje()">Crear viaje</ion-button>
+  <ion-footer>
+    <div class="footer">
+      <ion-icon name="home-outline" (click)="menu()"></ion-icon>
+      <ion-icon name="car-sport-outline" (click)="servicios()"></ion-icon>
+      <ion-icon name="person-circle-outline" (click)="cuenta()"></ion-icon>
+    </div>
+  </ion-footer>
+</ion-content>

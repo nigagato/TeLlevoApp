@@ -1,0 +1,41 @@
+.header {
+    background-color: #004b80; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 9%; 
+    font-size: large;
+}
+  
+  
+.txtDorado{
+    color: gold; 
+}
+  
+.txtBlanco{
+    color: white; 
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.img {
+    max-width: 100%; 
+    max-height: 50%; 
+}
+  
+.txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
+  
+  .fondo{
+    --background: url('../../../assets/img/fondo.png') 0/100% 100%;
+}

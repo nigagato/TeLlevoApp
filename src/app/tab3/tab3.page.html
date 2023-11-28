@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 3
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<div id="controles">
+  <ion-input [(ngModel)]="direccion"></ion-input>
+  <ion-button (click)="buscar()">Buscar</ion-button>
+  <ion-button (click)="ir()">IR</ion-button>
+</div>  
+ <div id="map"></div>
+</ion-content>

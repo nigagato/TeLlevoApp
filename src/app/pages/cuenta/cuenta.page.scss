@@ -1,0 +1,103 @@
+.header {
+    background-color: #004b80; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 9%; 
+    font-size: large;
+    font-weight: bold;
+}
+.txtDorado{
+    color: gold; 
+    font-size: larger;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+  
+.txtBlanco{
+    color: white; 
+    font-size: larger;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+
+.footer ion-icon {
+    font-size: 24px; 
+}
+.fondo{
+    --background: url('../../../assets/img/fondo.png') 0/100% 100%;
+    
+}
+
+ion-footer {
+    background-color: #e3e3e3 ;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+.footer ion-icon {
+    margin: 0 30px;
+    font-size: 24px;
+}
+
+.user-info {
+    display: flex;
+    margin-left: -9%;
+    padding: 5px; 
+    color: black;
+    margin-top: 5%;
+    font-size: xx-large;
+    
+}
+
+.user-info ion-title {
+    font-size: large; 
+    margin-left: 15px; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.user-info ion-icon {
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.config {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 9% 0;
+    font-weight: bold;
+    color: black;
+    border-bottom: 1px solid #aaa; /* Agrega una línea de separación */
+}
+
+.config .icono {
+    margin-left: 10px;
+    font-size: 50px;
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+.txt{
+    margin-left: 3%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    
+}
+
+.estrella{
+    color: black;
+    font-size: medium;
+    margin-left: 14px;
+    margin-top: -10px;
+}
+
+.toolbar{
+    background-color: white;
+}
+.icono{
+    font-size: 50px;
+}

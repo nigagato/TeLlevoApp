@@ -1,0 +1,35 @@
+<ion-content [fullscreen]="true" class="fondo">
+  <div class="header">
+    <div class="header-text">
+      <span class="txtDorado">TeLlevo</span> <span class="txtBlanco">App</span>
+    </div>
+  </div>
+  <div class="destacados">
+    <ion-searchbar class="searchbar" style="color: black;"></ion-searchbar>
+  </div>
+  <div class="mensaje-bienvenida mat-elevation-z4">
+    <div class="contenido-bienvenida">
+      <br>
+      <span class="saludo">Bienvenido de vuelta</span>
+      <span class="nombre-usuario">{{usuario}}</span>
+      <span class="info">Duoc UC</span>
+      <span class="info">Sede Puente Alto</span>
+      <br>
+    </div>
+  </div>
+  
+  <br>
+  <div class="titulo">Sugerencias</div>
+  <div class="sugerencias">
+    <div class="pasajero"><ion-icon name="person-outline" (click)="pasajero1()"></ion-icon>Pasajero</div>
+    <div class="conductor"><ion-icon name="car-outline" (click)="conductor()"></ion-icon>Conductor</div>
+  </div>
+
+  <ion-footer>
+    <div class="footer">
+      <ion-icon name="home-outline" (click)="menu()"></ion-icon>
+      <ion-icon name="car-sport-outline" (click)="servicios()"></ion-icon>
+      <ion-icon name="person-circle-outline" (click)="cuenta()"></ion-icon>
+    </div>
+  </ion-footer>
+</ion-content>

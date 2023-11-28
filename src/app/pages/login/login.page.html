@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true" class="fondo">
+  <div class="header">
+    <div class="header-text">
+      <span class="txtDorado">TeLlevo</span> <span class="txtBlanco">App</span>
+    </div>
+  </div>
+  <div class="icono">
+    <ion-icon name="chevron-back-outline" (click)="registro()"></ion-icon>
+  </div>
+  <div class="user-container">
+    <div class="titulo">Login</div>
+    <br>
+    <div class="usuario">Nombre de usuario</div>
+    <mat-form-field>
+      <mat-label>Nombre de usuario...</mat-label>
+      <input matInput [(ngModel)]="username">
+    </mat-form-field>
+    <div class="contraseña">Contraseña</div>
+    <mat-form-field>
+      <mat-label>Contraseña</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="password">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+    <ion-button fill="clear" expand="block" class="login" (click)="menu()">Iniciar sesión</ion-button>
+    <br>
+    <div class="minitxt" (click)="rescontracod()">Reestablecer contraseña</div>
+  </div>
+</ion-content>

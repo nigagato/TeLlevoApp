@@ -1,0 +1,59 @@
+.header {
+    background-color: #004b80; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 9%; 
+    font-size: large;
+    font-weight: bold;
+}
+.txtDorado{
+    color: gold; 
+    font-size: larger;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+  
+.txtBlanco{
+    color: white; 
+    font-size: larger;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.fondo{
+    --background: url('../../../assets/img/fondo.png') 0/100% 100%;
+}
+
+
+
+.titulo {
+    font-size: x-large;
+    color: gold;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+.user-container {
+    background-color: #004b80;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    align-items: center;
+    margin-top: 50px;
+}
+  
+.registrar {
+    width: 70%;
+    height: 60px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gold;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+  

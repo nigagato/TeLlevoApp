@@ -1,0 +1,44 @@
+<ion-content [fullscreen]="true" class="fondo">
+  <div class="header">
+    <div class="header-text">
+      <span class="txtDorado">TeLlevo</span> <span class="txtBlanco">App</span>
+    </div>
+  </div>
+  <div class="titulo">
+    <ion-icon name="chevron-back-outline" (click)="pasajero1()"></ion-icon>
+  </div>
+  <div class="icono">
+    <ion-icon name="car-outline" class="icono-grande"></ion-icon>
+    <div class="detalle">
+      <span *ngIf="viaje" style="color: black;">Chofer: {{ viaje.chofer_id }}</span>
+    </div>
+  </div>
+  
+  <br><br>
+  
+  <div class="direccion">
+    <span class="direccion-texto">
+      <ion-icon name="location-outline"></ion-icon>
+      <span *ngIf="viaje">Dirección Inicial: {{ viaje.direccion_inicial }}</span>
+    </span>
+  </div>
+  
+  <div class="direccion">
+    <span class="direccion-texto">
+      <ion-icon name="location-outline"></ion-icon>
+      <span *ngIf="viaje">Dirección Final: {{ viaje.direccion_final }}</span>
+    </span>
+  </div>
+  
+  <br><br>
+  <br>
+  
+  <div class="cancelar" (click)="eliminar()">Cancelar viaje</div>
+  <ion-footer>
+    <div class="footer">
+      <ion-icon name="home-outline" (click)="menu()"></ion-icon>
+      <ion-icon name="car-sport-outline" (click)="servicios()"></ion-icon>
+      <ion-icon name="person-circle-outline" (click)="cuenta()"></ion-icon>
+    </div>
+  </ion-footer>
+</ion-content>

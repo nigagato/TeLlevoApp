@@ -1,0 +1,136 @@
+.header {
+    background-color: #004b80; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 9%; 
+    font-size: large;
+    font-weight: bold;
+}
+.txtDorado{
+    color: gold; 
+    font-size: larger;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+  
+.txtBlanco{
+    color: white; 
+    font-size: larger;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.titulo {
+    font-size: x-large;
+    color: black;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 40px;
+
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+  
+ion-icon {
+    margin-right: 0px; 
+}
+
+.fondo{
+    --background: url('../../../assets/img/fondo.png') 0/100% 100%;
+    
+}
+
+ion-footer {
+    background-color: #e3e3e3 ;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+.footer ion-icon {
+    margin: 0 30px;
+    font-size: 24px;
+}
+
+
+
+.titulo ion-icon{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -10%;
+    font-size: 36px;
+}
+
+
+.direccion {
+    background-color: #e3e3e3;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 10px; 
+    text-align: center;
+}
+  
+.direccion-inicial,
+.direccion-final {
+    font-size: large;
+}
+.direccion-texto {
+    font-size: large;
+}
+
+.direccion-texto ion-button {
+    margin-right: auto; /* Empujar los botones hacia la izquierda */
+}
+
+.direccion ion-button{
+    margin-right: auto;
+}
+
+.boton{
+    width: 70%;
+    height: 60px;
+    border-radius: 25px;
+    margin-left: 32px;
+    font-weight: bold;
+    font-size: 1rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gold; 
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 45px;
+}
+
+.usuarios {
+    color: black;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin-top: 20px;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.usuarios ion-icon{
+    font-size: 200%;
+    margin-left: 33%;
+}

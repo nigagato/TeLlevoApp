@@ -1,0 +1,105 @@
+.header {
+    background-color: #004b80; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 9%; 
+    font-size: large;
+    font-weight: bold;
+}
+.txtDorado{
+    color: gold; 
+    font-size: larger;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+  
+.txtBlanco{
+    color: white; 
+    font-size: larger;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.titulo {
+    font-size: x-large;
+    color: black;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 50px;
+
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+  
+ion-icon {
+    margin-right: 0px; 
+}
+
+.fondo{
+    --background: url('../../../assets/img/fondo.png') 0/100% 100%;
+    
+}
+
+ion-footer {
+    background-color: #e3e3e3 ;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+.footer ion-icon {
+    margin: 0 30px;
+    font-size: 24px;
+}
+
+
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.servicio ion-icon {
+    font-size: 36px;
+}
+
+.servicio p {
+    font-size: large;
+}
+
+.titulo,
+.servicio p {
+    color: black;
+}
+
+/* Estilos adicionales que puedas tener */
+.header-text,
+.footer ion-icon {
+    color: black;
+}
+
+.servicio ion-icon{
+    color: black;
+    font-size: 120px;
+}
+
+.titulo ion-icon{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -10%;
+    font-size: 36px;
+}

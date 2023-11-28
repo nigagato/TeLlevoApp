@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true" class="fondo">
+  <div class="header">
+    <div class="header-text">
+      <span class="txtDorado">TeLlevo</span> <span class="txtBlanco">App</span>
+    </div>
+  </div>
+  <div class="icono">
+    <ion-icon name="chevron-back-outline" (click)="rescontracod()"></ion-icon>
+  </div>
+  <div class="user-container">
+    <div class="titulo">Restablecer Contraseña</div>
+    <br>
+    <div class="txt">Ingresa tu nueva contraseña</div>
+    <mat-form-field>
+      <mat-label>Contraseña</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <div class="txt">Repite tu nueva contraseña</div>
+    <mat-form-field>
+      <mat-label>Repita contraseña</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <ion-button fill="clear" expand="block" class="boton" (click)="contrarestablecida()">Restablecer contraseña</ion-button>
+  </div>
+</ion-content>

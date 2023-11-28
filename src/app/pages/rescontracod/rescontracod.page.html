@@ -1,0 +1,20 @@
+<ion-content [fullscreen]="true" class="fondo">
+  <div class="header">
+    <div class="header-text">
+      <span class="txtDorado">TeLlevo</span> <span class="txtBlanco">App</span>
+    </div>
+  </div>
+  <div class="icono">
+    <ion-icon name="chevron-back-outline" (click)="login()"></ion-icon>
+  </div>
+  <div class="user-container">
+    <div class="titulo">Restablecer Contraseña</div>
+    <br>
+    <div class="txt">Se ha enviado un codigo a tu correo, ingresalo aquí</div>
+    <mat-form-field>
+      <mat-label>Código</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <ion-button fill="clear" expand="block" class="boton" (click)="nuevacontra()">Siguiente</ion-button>
+  </div>
+</ion-content>

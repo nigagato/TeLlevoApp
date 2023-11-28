@@ -1,0 +1,87 @@
+.header {
+    background-color: #004b80; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 9%; 
+    font-size: large;
+    font-weight: bold;
+}
+.txtDorado{
+    color: gold; 
+    font-size: larger;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+  
+.txtBlanco{
+    color: white; 
+    font-size: larger;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.user-container {
+    background-color: #004b80;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.titulo {
+    font-size: x-large;
+    color: gold;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.fondo{
+    --background: url('../../../assets/img/fondo.png') 0/100% 100%;
+}
+.txt {
+    font-size: medium;
+    color: gold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.mat-form-field label.mat-label {
+    font-size: small; 
+    color: gold; 
+    width: auto; 
+    padding: 0 8px; 
+}
+.minitxt{
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.max {
+   color: white;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.registrar {
+    width: 70%;
+    height: 60px;
+    border-radius: 25px;
+    margin-left: 32px;
+    font-weight: bold;
+    font-size: 1rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gold; 
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+  
+  
+

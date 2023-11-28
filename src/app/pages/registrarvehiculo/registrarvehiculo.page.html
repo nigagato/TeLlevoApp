@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true" class="fondo">
+  <div class="header">
+    <div class="header-text">
+      <span class="txtDorado">TeLlevo</span> <span class="txtBlanco">App</span>
+    </div>
+  </div>
+  <div class="icono-atras">
+    <ion-icon name="chevron-back-outline" (click)="conductor()"></ion-icon>
+  </div>
+  
+  <div class="user-container">
+    <div class="titulo">Registro vehiculo</div>
+    <br>
+
+
+    <div class="txt">Ingresar patente</div>
+    <mat-form-field>
+      <mat-label>Patente de vehiculo....</mat-label>
+      <input matInput [(ngModel)]="patente">
+    </mat-form-field>
+
+
+    <div class="txt">Ingresar modelo</div>
+    <mat-form-field>
+      <mat-label>Modelo de vehiculo....</mat-label>
+      <input matInput [(ngModel)]="modelo">
+    </mat-form-field>
+
+    <ion-button fill="clear" expand="block" class="boton" (click)="grabarVehiculo()">Registrar vehiculo</ion-button>
+  </div>
+</ion-content>

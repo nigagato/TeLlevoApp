@@ -1,0 +1,19 @@
+<ion-content [fullscreen]="true" class="fondo">
+  <div class="header">
+    <div class="header-text">
+      <span class="txtDorado">TeLlevo</span> <span class="txtBlanco">App</span>
+    </div>
+  </div>
+  <ion-icon name="chevron-back-outline" class="flecha" (click)="cuenta()" style="color: black;"></ion-icon>
+  <div class="titulo">Listado de Trayectos</div>
+  <BR><BR>
+
+
+  <app-listadoviajes 
+    direccion_inicio="Inicio:{{viaje.direccion_inicial}}"
+    direccion_final="Final:{{viaje.direccion_final}}"
+    total="Valor:{{viaje.valor}}" 
+    *ngFor="let viaje of viajes"
+    ></app-listadoviajes>
+  
+</ion-content>

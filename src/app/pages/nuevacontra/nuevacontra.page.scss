@@ -1,0 +1,74 @@
+.header {
+    background-color: #004b80; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 9%; 
+    font-size: large;
+    font-weight: bold;
+}
+.txtDorado{
+    color: gold; 
+    font-size: larger;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+  
+.txtBlanco{
+    color: white; 
+    font-size: larger;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.titulo {
+    font-size: x-large;
+    color: gold;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.user-container {
+    background-color: #004b80;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    height: 65%;
+    margin-top: 40px;
+}
+
+.fondo{
+    --background: url('../../../assets/img/fondo.png') 0/100% 100%;
+}
+.txt {
+    font-size: medium;
+    color: gold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.boton{
+    width: 70%;
+    height: 60px;
+    border-radius: 25px;
+    margin-left: 32px;
+    font-weight: bold;
+    font-size: x-small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gold; 
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.icono ion-icon{
+    display: flex;
+    justify-content: flex-start;
+    color: black;
+    margin-top: 10px;
+    font-size: 36px;
+}

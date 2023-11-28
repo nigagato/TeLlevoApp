@@ -1,0 +1,109 @@
+.header {
+    background-color: #004b80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 9%;
+    font-size: large;
+    font-weight: bold;
+}
+
+.txtDorado, .txtBlanco {
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.txtDorado {
+    color: gold;
+}
+
+.txtBlanco {
+    color: white;
+}
+
+.titulo {
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.fondo {
+    --background: url('../../../assets/img/fondo.png') 0/100% 100%;
+}
+
+ion-footer {
+    background-color: #e3e3e3;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+.footer ion-icon {
+    margin: 0 30px;
+    font-size: 24px;
+}
+
+.sugerencias {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+
+.pasajero, .conductor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.pasajero ion-icon, .conductor ion-icon {
+    font-size: 80px;
+    margin-bottom: 5px;
+}
+
+.searchbar {
+    --background: rgba(137, 124, 124, 0.2);
+    color: black;
+}
+
+.mensaje-bienvenida {
+    background-color: #d1d1d1;
+    border-radius: 15%;
+    text-align: center;
+    margin-top: 10%;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.contenido-bienvenida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.saludo, .nombre-usuario {
+    color: #333;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.info {
+    color: #333;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

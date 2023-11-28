@@ -1,0 +1,35 @@
+<ion-content [fullscreen]="true" class="fondo">
+  <div class="header">
+    <div class="header-text">
+      <span class="txtDorado">TeLlevo</span> <span class="txtBlanco">App</span>
+    </div>
+  </div>
+
+  <div class="ganancias">
+    <div class="ganancias-icon">
+      <ion-icon name="chevron-back-outline" (click)="cuenta()"></ion-icon>
+    </div>
+    <div class="ganancias-titulo">Estado de Cuenta</div>
+  </div> <br>
+  
+  <div class="ganancias-detalle">
+    <div>
+      <ion-icon name="cash-outline" size="large" style="color: green;"></ion-icon>
+      <span style="font-size: medium;">Ganancias Acumuladas:</span>
+      <span class="monto" style="font-size: medium;">CLP {{sumaDeValores}}</span>
+    </div>
+    <br><br>
+    <div>
+      <ion-icon name="person-circle-outline" size="large" style="color: black;"></ion-icon>
+      <span style="color: black; font-size: large;">Usuario actual: {{usuario}}</span>
+    </div>
+  </div>
+  <br>
+  <div class="ganancias-detalle">
+    <div>
+      <ion-icon name="calendar-outline" size="large" style="color: blue;"></ion-icon>
+      <span style="color: black; font-size: medium; margin-bottom: 3%;">Período de Ganancias:</span>
+      <span class="fecha" style="color: black; font-size: medium;">{{'01/01'}} - {{'31/12'}}</span> <!-- Ejemplo: Fechas ficticias -->
+    </div>
+  </div>
+</ion-content>

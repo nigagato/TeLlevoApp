@@ -1,0 +1,116 @@
+.header {
+    background-color: #004b80; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 9%; 
+    font-size: large;
+    font-weight: bold;
+}
+.txtDorado{
+    color: gold; 
+    font-size: larger;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+  
+.txtBlanco{
+    color: white; 
+    font-size: larger;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+/* Estilos para el fondo */
+.fondo {
+    --background: url('../../../assets/img/fondo.png') 0/100% 100%;
+}
+
+/* Estilos para la información del usuario */
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: black;
+}
+
+.user-avatar{
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    margin-left: -5px;
+    
+}
+
+.user-details {
+    flex-grow: 1;
+}
+
+.user-name {
+    font-size: 16px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 4px;
+}
+
+.user-username {
+    font-size: 14px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 4px;
+}
+
+.user-telefono {
+    font-size: 14px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 4px;
+}
+
+/* Estilos para los iconos */
+.icono {
+    font-size: 100px;
+}
+
+.iconocasa {
+    font-size: 50px;
+    margin-right: 20px; /* Espacio entre el icono y el texto */
+    margin-left: -10px;
+}
+
+/* Estilos para los servicios */
+.casa, .sede {
+    font-size: 18px;
+    color: black;
+    text-align: left;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.servicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea los elementos horizontalmente en el centro */
+    padding: 20px;
+    color: black;
+}
+
+.servicio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logout{
+    color: red;
+    text-align: center;
+    font-size: x-large;
+    margin-right: -100px;
+    margin-top: 30px;
+}
+.x{
+    color: black;
+    margin-left: 5%;
+    margin-top: 10%;
+    font-size: 26px;
+}
+
+.flecha {
+    font-size: 20px;
+    margin-left: 10px; /* Ajusta el margen izquierdo de las flechas según tu preferencia */
+    margin-top: 0px; /* Ajusta el margen superior de las flechas según tu preferencia */
+}
+

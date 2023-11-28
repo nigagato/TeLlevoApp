@@ -1,0 +1,37 @@
+<ion-content [fullscreen]="true" class="fondo">
+  <div class="header">
+    <div class="header-text">
+      <span class="txtDorado">TeLlevo</span> <span class="txtBlanco">App</span>
+    </div>
+  </div>
+  <div class="x" (click)="cuenta()">X</div>
+  <div class="user-info">
+    <div class="user-avatar">
+      <ion-icon name="person-circle-outline" class="icono"></ion-icon>
+    </div>
+    <div class="user-details">
+      <div class="user-name">{{usuario}}</div>
+      <div class="user-telefono">Sede Puente Alto</div>
+    </div>
+  </div>
+
+  <div class="servicios">
+    <div class="servicio">
+      <div class="servicios-avatar">
+        <ion-icon name="home-sharp" class="iconocasa"></ion-icon>
+      </div>
+      <div class="casa" (click)="casasede()">Añadir casa</div>
+      <ion-icon name="chevron-forward-outline" class="flecha" (click)="casasede()"></ion-icon>
+    </div>
+
+    <div class="servicio">
+      <div class="servicios-avatar">
+        <ion-icon name="business" class="iconocasa"></ion-icon>
+      </div>
+      <div class="sede" (click)="casasede()">Añadir sede</div>
+      <ion-icon name="chevron-forward-outline"class="flecha" (click)="casasede()"></ion-icon>
+    </div>
+  </div>
+
+  <div class="logout" (click)="login()">Cerrar sesión.</div>
+</ion-content>
