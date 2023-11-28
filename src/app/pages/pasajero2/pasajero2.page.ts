@@ -158,6 +158,10 @@ export class Pasajero2Page implements OnInit {
         if (largo>0) {
           this.lngFin=route["features"][0]["center"][0];
           this.latFin=route["features"][0]["center"][1];
+          const mapa = document.getElementById('map');
+          if (mapa){
+            mapa.style.height='50vh';
+          }
         }
         for (let index = 0; index < route["features"].length; index++) {
           const element = route["features"][index]["place_name"];
@@ -165,6 +169,7 @@ export class Pasajero2Page implements OnInit {
           const lng=route["features"][index]["center"][0];
           const lat=route["features"][index]["center"][1];
           console.log((index+1)+") Lng:"+lng+" Lat:"+lat);
+          
         }
       })
       .catch((error) => {

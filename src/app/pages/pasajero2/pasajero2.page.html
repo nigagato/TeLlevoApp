@@ -1,4 +1,4 @@
-<ion-content [fullscreen]="true" class="fondo">
+<ion-content [fullscreen]="true"  class="fondo">
   <div class="header">
     <div class="header-text">
       <span class="txtDorado">TeLlevo</span> <span class="txtBlanco">App</span>
@@ -6,28 +6,30 @@
   </div>
 
   <div class="titulo">
-    <ion-icon name="chevron-back-outline" (click)="conductor()"></ion-icon>Trayecto
+    <ion-icon name="chevron-back-outline" (click)="conductor()" ></ion-icon>
+    Trayecto
   </div>
-    <div id="controles">
+  <div id="controles">
       <ion-input [(ngModel)]="direccion" style="color: black;"></ion-input>
       <ion-button (click)="buscar()">Buscar</ion-button>
       <ion-button (click)="ir()">IR</ion-button>
-    </div>  
+  </div>  
+  <div id="container_map">
     <div id="map"></div>
-
-    
-
-
-  <mat-form-field floatLabel="always" style="margin-left: 5%; color: black;">
-    <mat-label>Precio</mat-label>
-    <input matInput type="number" class="example-right-align" placeholder="0" [(ngModel)]="valor">
-    <span matTextPrefix>$&nbsp;</span>
-    <span matTextSuffix>.00</span>
-  </mat-form-field>
+  </div>
 
 
-  <br>
-  <ion-button fill="clear" expand="block" class="boton" (click)="grabarViaje()">Crear viaje</ion-button>
+  <div class="input_precio">
+    <mat-form-field floatLabel="always" style="color: black;">
+      <mat-label>Precio</mat-label>
+      <input matInput type="number" class="example-right-align" placeholder="0" [(ngModel)]="valor">
+      <span matTextPrefix>$&nbsp;</span>
+      <span matTextSuffix>.00</span>
+    </mat-form-field>
+    <ion-button fill="clear" expand="block" class="boton" (click)="grabarViaje()">Crear viaje</ion-button>
+  </div>
+
+
   <ion-footer>
     <div class="footer">
       <ion-icon name="home-outline" (click)="menu()"></ion-icon>
