@@ -1,4 +1,5 @@
-<ion-content [fullscreen]="true"  class="fondo">
+<ion-content [fullscreen]="true" [scrollY]="false" class="fondo">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet" />
   <div class="header">
     <div class="header-text">
       <span class="txtDorado">TeLlevo</span> <span class="txtBlanco">App</span>
@@ -18,18 +19,17 @@
     <div id="map"></div>
   </div>
 
-
+  
   <div class="input_precio">
     <mat-form-field floatLabel="always" style="color: black;">
       <mat-label>Precio</mat-label>
       <input matInput type="number" class="example-right-align" placeholder="0" [(ngModel)]="valor">
       <span matTextPrefix>$&nbsp;</span>
-      <span matTextSuffix>.00</span>
     </mat-form-field>
     <ion-button fill="clear" expand="block" class="boton" (click)="grabarViaje()">Crear viaje</ion-button>
   </div>
 
-
+    
   <ion-footer>
     <div class="footer">
       <ion-icon name="home-outline" (click)="menu()"></ion-icon>

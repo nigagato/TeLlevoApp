@@ -14,96 +14,115 @@ import { environment } from 'src/environments/environment';
 })
 export class Pasajero2Page implements OnInit {
   valor: number = 0;
-  constructor(private router: Router,
-              private toastCtrl: ToastController, 
-              private servFire:ServicioFirebaseService) { }
+  direccion: string = '';
+  lngFin: number = 0;
+  latFin: number = 0;
+
+  constructor(
+    private router: Router,
+    private toastCtrl: ToastController,
+    private servFire: ServicioFirebaseService
+  ) {}
 
   ngOnInit() {
   }
-  menu(){
-    this.router.navigate(['/menu'])
+
+  menu() {
+    this.router.navigate(['/menu']);
   }
-  cuenta(){
-    this.router.navigate(['/cuenta'])
+
+  cuenta() {
+    this.router.navigate(['/cuenta']);
   }
-  servicios(){
-    this.router.navigate(['/servicios'])
+
+  servicios() {
+    this.router.navigate(['/servicios']);
   }
-  conductor(){
-    this.router.navigate(['/conductor'])
+
+  conductor() {
+    this.router.navigate(['/conductor']);
   }
-  pasajero4(){
-    this.router.navigate(['/pasajero4'])
+
+  pasajero4() {
+    this.router.navigate(['/pasajero4']);
   }
+
   grabarViaje() {
     const usuario = localStorage.getItem('username');
-    
+
     if (usuario !== null) {
       this.servFire.obtenerIdViajeEnCurso(usuario).then((idViajeEnCurso) => {
         if (idViajeEnCurso) {
-          this.mostrarAlerta("Alerta", "No puedes crear un nuevo viaje porque ya tienes uno en curso.");
+          this.mostrarAlerta(
+            'Alerta',
+            'No puedes crear un nuevo viaje porque ya tienes uno en curso.'
+          );
         } else {
-          this.servFire.buscarVehiculoPorChofer(usuario).then((vehiculo) => {
-            if (vehiculo) {
-              let mi_viaje: Viaje = {
-                direccion_inicial: 'Calle Falsa 15',
-                direccion_final: 'Calle Falsa 6',
-                valor: this.valor,
-                chofer_id: usuario,
-                pasajero_id: '',
-                estado: 1,
-                patente: vehiculo.patente, 
-              };
-  
-              this.servFire.grabarViaje(mi_viaje).then(() => {
-                console.log("Viaje grabado");
-              }).catch((e) => {
-                console.log(e);
-              }).finally(() => {
-                this.router.navigate(['/viajeconductor']);
-              });
-            } else {
-              this.mostrarAlerta("Alerta", "No tienes un vehículo registrado, no puedes crear un viaje.");
-            }
-          });
+          this.servFire
+            .buscarVehiculoPorChofer(usuario)
+            .then((vehiculo) => {
+              if (vehiculo) {
+                const direccionInicial = localStorage.getItem('direccionGuardada')|| '';
+                let mi_viaje: Viaje = {
+                  direccion_inicial: direccionInicial,
+                  direccion_final: 'Duoc UC Puente Alto',
+                  valor: this.valor,
+                  chofer_id: usuario,
+                  pasajero_id: '',
+                  estado: 1,
+                  patente: vehiculo.patente,
+                };
+                
+                localStorage.setItem('viaje', JSON.stringify(mi_viaje));
+                this.servFire
+                  .grabarViaje(mi_viaje)
+                  .then(() => {
+                    console.log('Viaje grabado');
+                  })
+                  .catch((e) => {
+                    console.log(e);
+                  })
+                  .finally(() => {
+                    this.router.navigate(['/viajeconductor']);
+                  });
+              } else {
+                this.mostrarAlerta(
+                  'Alerta',
+                  'No tienes un vehículo registrado, no puedes crear un viaje.'
+                );
+              }
+            });
         }
       });
     } else {
       console.log('El valor de "username" en el localStorage es null.');
     }
   }
+
   async mostrarAlerta(titulo: string, mensaje: string) {
     const alert = await this.toastCtrl.create({
       header: titulo,
       message: mensaje,
       position: 'top',
-      buttons: ['OK']
+      buttons: ['OK'],
     });
 
     await alert.present();
   }
-  
-  lngFin:number=0;
-  latFin:number=0;
 
   ir() {
     var duoc = [-70.57902808465514, -33.59778231829415];
     var map = new mapboxgl.Map({
       accessToken: environment.apiMB,
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v11',     
+      style: 'mapbox://styles/mapbox/streets-v11',
       center: [duoc[0], duoc[1]],
       zoom: 13,
     });
-    
-    var startPoint = [-74.5, 40]; // Coordenadas del punto de inicio
-    var endPoint = [-74.45, 40.1]; // Coordenadas del punto de destino
 
-    startPoint = duoc;
-    endPoint = [this.lngFin,this.latFin];
-    console.log(endPoint);
-    var marker = new mapboxgl.Marker().setLngLat([duoc[0], duoc[1]]).addTo(map);
-    var marker2 = new mapboxgl.Marker().setLngLat([endPoint[0], endPoint[1]]).addTo(map);
+    var startPoint = duoc;
+    var endPoint = [this.lngFin, this.latFin];
+
     // Utiliza la API de direcciones para obtener la ruta entre los dos puntos
     fetch(
       `https://api.mapbox.com/directions/v5/mapbox/driving/${startPoint[0]},${startPoint[1]};${endPoint[0]},${endPoint[1]}?steps=true&geometries=geojson&access_token=${environment.apiMB}`
@@ -141,40 +160,36 @@ export class Pasajero2Page implements OnInit {
         console.log(error);
       });
   }
-  direccion:string='';
 
-  buscar(){
+  buscar() {
     fetch(
       `https://api.mapbox.com/geocoding/v5/mapbox.places/${this.direccion}.json?access_token=${environment.apiMB}`
     )
       .then((response) => response.json())
       .then((data) => {
         var route = data;
-        
 
-        console.log(route["features"]);    
-        var largo= route["features"].length;
+        console.log(route['features']);
+        var largo = route['features'].length;
         console.log(largo);
-        if (largo>0) {
-          this.lngFin=route["features"][0]["center"][0];
-          this.latFin=route["features"][0]["center"][1];
-          const mapa = document.getElementById('map');
-          if (mapa){
-            mapa.style.height='50vh';
-          }
+        if (largo > 0) {
+          this.lngFin = route['features'][0]['center'][0];
+          this.latFin = route['features'][0]['center'][1];
+
+          // Guardar la dirección en el localStorage
+          const direccionCompleta = route['features'][0]['place_name'];
+          localStorage.setItem('direccionGuardada', direccionCompleta);
         }
-        for (let index = 0; index < route["features"].length; index++) {
-          const element = route["features"][index]["place_name"];
+        for (let index = 0; index < route['features'].length; index++) {
+          const element = route['features'][index]['place_name'];
           console.log(element);
-          const lng=route["features"][index]["center"][0];
-          const lat=route["features"][index]["center"][1];
-          console.log((index+1)+") Lng:"+lng+" Lat:"+lat);
-          
+          const lng = route['features'][index]['center'][0];
+          const lat = route['features'][index]['center'][1];
+          console.log((index + 1) + ') Lng:' + lng + ' Lat:' + lat);
         }
       })
       .catch((error) => {
         console.log(error);
       });
   }
-
 }

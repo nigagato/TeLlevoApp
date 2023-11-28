@@ -20,7 +20,7 @@
 }
 
 .titulo {
-    font-size: medium;
+    font-size: large;
     color: black;
     margin-bottom: 20px;
     justify-content: center;
@@ -34,14 +34,15 @@
 }
 
 ion-footer {
-    position: fixed;
+    background-color: #e3e3e3 ;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
     bottom: 0;
     width: 100%;
-    max-width: 100%;
     height: 50px;
-    z-index: 999;
-    background-color: white;
-    color: black;
 }
 
 .footer ion-icon {
@@ -88,21 +89,20 @@ ion-footer {
     margin-right: auto;
 }
 
-.boton{
-    width: 70%;
+.boton {
+    width: 100%;
     height: 60px;
     border-radius: 25px;
-    margin-left: 32px;
+    margin-left: 25%; /* Ajusta según sea necesario */
     font-weight: bold;
-    font-size: 1rem; 
+    font-size: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: gold; 
+    background-color: gold;
     color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-left: 45px;
-}
+  }
 
 body {
     padding: 0;
@@ -114,29 +114,53 @@ html, body, #map {
 }
 #map{
     width: 100%;
-    height: 50vh; 
+    height: 40%; 
     max-width: 100%;
     overflow: hidden;
 }
-#controles{
-    width: 100%;
-    height: 15%;
-    border: solid 2px black;
-}
-
+#controles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  ion-input {
+    width: 80%;
+    max-width: 300px; /* Ajusta según sea necesario */
+  }
+  
+  ion-button {
+    width: 40%; /* Ajusta según sea necesario */
+    max-width: 150px; /* Ajusta según sea necesario */
+    margin-bottom: 10px;
+    color: black;
+    background-color: gold;
+  }
+  
 .input_precio {
     position: absolute;
-    bottom: 60px;
-    left: 50%;
+    bottom: 9%;
+    left: 45%;
     transform: translateX(-50%);
     z-index: 2;
     background-color: #fff;
-}
-
-#container_map {
-    position: relative;
+    width: 80%;
+    max-width: 300px; /* Ajusta según sea necesario */
+    padding: 10px;
+    margin-top: 9%;
+  }
+  
+  .mat-form-field {
     width: 100%;
-    height: calc(100vh - 56px);
+  }
+  #container_map {
+    width: 100%;
+    height: 80%;
     z-index: 1;
     overflow: hidden;
+    position: relative; /* Agrega posición relativa al contenedor del mapa */
   }
+  
